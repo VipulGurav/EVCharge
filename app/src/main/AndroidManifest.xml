@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Always include this permission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <queries>
+        <package android:name="com.whatsapp" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ico_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".Pages.EntertainmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Pages.CancleBookingSlotActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.HostRegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.HostViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.BookingConfirmationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.AboutUsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.MyBookingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.WalletActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.PaymentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.BookStation"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.ViewDetails"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.ChargStationAdd"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.UserProfile"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAoUz8oM5mnPEYiODNdOMiy_1pnTHZG3tY" />
+
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="true" />
+
+        <activity
+            android:name=".Pages.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.OtpValidation"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Pages.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>
